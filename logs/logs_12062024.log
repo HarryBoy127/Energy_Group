@@ -1,0 +1,17 @@
+2024-06-12 15:03:49,964 - __main__ - INFO - Pipeline started.
+2024-06-12 15:03:50,004 - botocore.credentials - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2024-06-12 15:03:57,249 - src.s3_utils - INFO - Successfully fetched energy_raw_06032024.csv from tkh-nyc-energy
+2024-06-12 15:03:57,258 - src.data_cleaning - INFO - Selecting specific columns from the DataFrame.
+2024-06-12 15:03:57,353 - src.data_cleaning - INFO - Selected columns: ['borough', 'account_name', 'serial_number', 'funding_origin', 'total_bill', 'kwh_consumption', 'kwh_bill', 'kw_consumption', 'kw_bill', 'year_month', 'start_date', 'end_date']
+2024-06-12 15:03:57,353 - src.data_cleaning - INFO - Renaming columns of the DataFrame.
+2024-06-12 15:03:57,414 - src.data_cleaning - INFO - Renamed columns: ['Borough', 'Account_Name', 'Serial_Number', 'Funding_Origin', 'Total_Bill', 'KWH_Consumption', 'KWH_Bill', 'KW_Consumption', 'KW_Bill', 'Year_Month', 'Start_Date', 'End_Date']
+2024-06-12 15:03:57,414 - src.data_cleaning - INFO - Dropping columns with NaN values in 'Start_Date' and 'End_Date'.
+2024-06-12 15:03:57,651 - src.data_cleaning - INFO - Remaining columns after drop: ['Borough', 'Account_Name', 'Serial_Number', 'Funding_Origin', 'Total_Bill', 'KWH_Consumption', 'KWH_Bill', 'KW_Consumption', 'KW_Bill', 'Year_Month', 'Start_Date', 'End_Date']
+2024-06-12 15:03:57,651 - src.data_cleaning - INFO - Fixing data types of specific columns.
+2024-06-12 15:03:58,054 - src.data_cleaning - INFO - Data types fixed for columns: ['Total_Bill', 'KWH_Consumption', 'KW_Consumption', 'KW_Bill', 'KWH_Bill']
+2024-06-12 15:03:58,054 - src.data_cleaning - INFO - Cleaning textual columns: 'Borough', 'Account_Name', 'Funding_Origin'.
+2024-06-12 15:04:01,145 - src.data_cleaning - INFO - Textual columns cleaned.
+2024-06-12 15:04:01,146 - src.data_cleaning - INFO - Cleaning textual columns: 'Borough', 'Account_Name', 'Funding_Origin'.
+2024-06-12 15:04:03,808 - src.data_cleaning - INFO - Textual columns cleaned.
+2024-06-12 15:04:16,488 - src.s3_utils - INFO - Successfully uploaded ./data/processed/energy_clean.csv to tkh-nyc-energy/energy_cleaned_06122024.csv
+2024-06-12 15:04:16,488 - __main__ - INFO - Pipeline finished successfully.

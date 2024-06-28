@@ -1,0 +1,10 @@
+paths:
+  raw_data: "data/raw"         # Path to raw data files
+  processed_data: "data/processed"  # Path to save processed data files
+  logs: "logs"                 # Directory to save log files
+
+logging:
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"  # Logging format
+
+database:
+  table_name: "nyc_energy_data"  # Default table name for storing data
