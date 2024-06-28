@@ -1,0 +1,71 @@
+2024-06-13 12:40:08,096 - __main__ - INFO - Pipeline started.
+2024-06-13 12:40:08,173 - botocore.credentials - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2024-06-13 12:40:13,648 - src.s3_utils - INFO - Successfully fetched energy_raw_06032024.csv from tkh-nyc-energy
+2024-06-13 12:40:13,656 - src.data_cleaning - INFO - Selecting specific columns from the DataFrame.
+2024-06-13 12:40:13,709 - src.data_cleaning - INFO - Selected columns: ['borough', 'account_name', 'serial_number', 'funding_origin', 'total_bill', 'kwh_consumption', 'kwh_bill', 'kw_consumption', 'kw_bill', 'year_month', 'start_date', 'end_date']
+2024-06-13 12:40:13,710 - src.data_cleaning - INFO - Renaming columns of the DataFrame.
+2024-06-13 12:40:13,764 - src.data_cleaning - INFO - Renamed columns: ['Borough', 'Account_Name', 'Serial_Number', 'Funding_Origin', 'Total_Bill', 'KWH_Consumption', 'KWH_Bill', 'KW_Consumption', 'KW_Bill', 'Year_Month', 'Start_Date', 'End_Date']
+2024-06-13 12:40:13,764 - src.data_cleaning - INFO - Dropping columns with NaN values in 'Start_Date' and 'End_Date'.
+2024-06-13 12:40:13,932 - src.data_cleaning - INFO - Remaining columns after drop: ['Borough', 'Account_Name', 'Serial_Number', 'Funding_Origin', 'Total_Bill', 'KWH_Consumption', 'KWH_Bill', 'KW_Consumption', 'KW_Bill', 'Year_Month', 'Start_Date', 'End_Date']
+2024-06-13 12:40:13,932 - src.data_cleaning - INFO - Fixing data types of specific columns.
+2024-06-13 12:40:14,513 - src.data_cleaning - INFO - Data types fixed for columns: ['Total_Bill', 'KWH_Consumption', 'KW_Consumption', 'KW_Bill', 'KWH_Bill']
+2024-06-13 12:40:14,513 - src.data_cleaning - INFO - Cleaning textual columns: 'Borough', 'Account_Name', 'Funding_Origin'.
+2024-06-13 12:40:17,561 - src.data_cleaning - INFO - Textual columns cleaned.
+2024-06-13 12:40:17,561 - src.data_cleaning - INFO - Cleaning textual columns: 'Borough', 'Account_Name', 'Funding_Origin'.
+2024-06-13 12:40:20,607 - src.data_cleaning - INFO - Textual columns cleaned.
+2024-06-13 12:40:31,779 - src.s3_utils - INFO - Successfully uploaded ./data/processed/energy_clean.csv to tkh-nyc-energy/energy_cleaned_06132024.csv
+2024-06-13 12:40:31,780 - __main__ - INFO - Pipeline finished successfully.
+2024-06-13 12:43:58,585 - __main__ - INFO - Pipeline started.
+2024-06-13 12:43:58,625 - botocore.credentials - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2024-06-13 12:44:05,021 - src.s3_utils - INFO - Successfully fetched energy_raw_06032024.csv from tkh-nyc-energy
+2024-06-13 12:44:05,034 - src.data_cleaning - INFO - Selecting specific columns from the DataFrame.
+2024-06-13 12:44:05,105 - src.data_cleaning - INFO - Selected columns: ['borough', 'account_name', 'serial_number', 'funding_origin', 'total_bill', 'kwh_consumption', 'kwh_bill', 'kw_consumption', 'kw_bill', 'year_month', 'start_date', 'end_date']
+2024-06-13 12:44:05,105 - src.data_cleaning - INFO - Renaming columns of the DataFrame.
+2024-06-13 12:44:05,170 - src.data_cleaning - INFO - Renamed columns: ['Borough', 'Account_Name', 'Serial_Number', 'Funding_Origin', 'Total_Bill', 'KWH_Consumption', 'KWH_Bill', 'KW_Consumption', 'KW_Bill', 'Year_Month', 'Start_Date', 'End_Date']
+2024-06-13 12:44:05,170 - src.data_cleaning - INFO - Dropping columns with NaN values in 'Start_Date' and 'End_Date'.
+2024-06-13 12:44:05,341 - src.data_cleaning - INFO - Remaining columns after drop: ['Borough', 'Account_Name', 'Serial_Number', 'Funding_Origin', 'Total_Bill', 'KWH_Consumption', 'KWH_Bill', 'KW_Consumption', 'KW_Bill', 'Year_Month', 'Start_Date', 'End_Date']
+2024-06-13 12:44:05,342 - src.data_cleaning - INFO - Fixing data types of specific columns.
+2024-06-13 12:44:05,884 - src.data_cleaning - INFO - Data types fixed for columns: ['Total_Bill', 'KWH_Consumption', 'KW_Consumption', 'KW_Bill', 'KWH_Bill']
+2024-06-13 12:44:05,884 - src.data_cleaning - INFO - Cleaning textual columns: 'Borough', 'Account_Name', 'Funding_Origin'.
+2024-06-13 12:44:09,201 - src.data_cleaning - INFO - Textual columns cleaned.
+2024-06-13 12:44:09,201 - src.data_cleaning - INFO - Cleaning textual columns: 'Borough', 'Account_Name', 'Funding_Origin'.
+2024-06-13 12:44:12,291 - src.data_cleaning - INFO - Textual columns cleaned.
+2024-06-13 12:44:18,907 - src.s3_utils - ERROR - Failed to upload ./data/processed/energy_clean.csv to tkh-nyc-energy/clean_zone/energy_cleaned_06132024.csv: Parameter validation failed:
+Invalid bucket name "tkh-nyc-energy/clean_zone": Bucket name must match the regex "^[a-zA-Z0-9.\-_]{1,255}$" or be an ARN matching the regex "^arn:(aws).*:(s3|s3-object-lambda):[a-z\-0-9]*:[0-9]{12}:accesspoint[/:][a-zA-Z0-9\-.]{1,63}$|^arn:(aws).*:s3-outposts:[a-z\-0-9]+:[0-9]{12}:outpost[/:][a-zA-Z0-9\-]{1,63}[/:]accesspoint[/:][a-zA-Z0-9\-]{1,63}$"
+2024-06-13 12:44:18,908 - __main__ - INFO - Pipeline finished successfully.
+2024-06-13 12:51:09,309 - __main__ - INFO - Pipeline started.
+2024-06-13 12:51:09,348 - botocore.credentials - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2024-06-13 12:51:15,141 - src.s3_utils - INFO - Successfully fetched energy_raw_06032024.csv from tkh-nyc-energy
+2024-06-13 12:51:15,152 - src.data_cleaning - INFO - Selecting specific columns from the DataFrame.
+2024-06-13 12:51:15,360 - src.data_cleaning - INFO - Selected columns: ['borough', 'account_name', 'serial_number', 'funding_origin', 'total_bill', 'kwh_consumption', 'kwh_bill', 'kw_consumption', 'kw_bill', 'year_month', 'start_date', 'end_date']
+2024-06-13 12:51:15,360 - src.data_cleaning - INFO - Renaming columns of the DataFrame.
+2024-06-13 12:51:15,444 - src.data_cleaning - INFO - Renamed columns: ['Borough', 'Account_Name', 'Serial_Number', 'Funding_Origin', 'Total_Bill', 'KWH_Consumption', 'KWH_Bill', 'KW_Consumption', 'KW_Bill', 'Year_Month', 'Start_Date', 'End_Date']
+2024-06-13 12:51:15,444 - src.data_cleaning - INFO - Dropping columns with NaN values in 'Start_Date' and 'End_Date'.
+2024-06-13 12:51:15,647 - src.data_cleaning - INFO - Remaining columns after drop: ['Borough', 'Account_Name', 'Serial_Number', 'Funding_Origin', 'Total_Bill', 'KWH_Consumption', 'KWH_Bill', 'KW_Consumption', 'KW_Bill', 'Year_Month', 'Start_Date', 'End_Date']
+2024-06-13 12:51:15,647 - src.data_cleaning - INFO - Fixing data types of specific columns.
+2024-06-13 12:51:16,039 - src.data_cleaning - INFO - Data types fixed for columns: ['Total_Bill', 'KWH_Consumption', 'KW_Consumption', 'KW_Bill', 'KWH_Bill']
+2024-06-13 12:51:16,039 - src.data_cleaning - INFO - Cleaning textual columns: 'Borough', 'Account_Name', 'Funding_Origin'.
+2024-06-13 12:51:18,879 - src.data_cleaning - INFO - Textual columns cleaned.
+2024-06-13 12:51:18,879 - src.data_cleaning - INFO - Cleaning textual columns: 'Borough', 'Account_Name', 'Funding_Origin'.
+2024-06-13 12:51:21,736 - src.data_cleaning - INFO - Textual columns cleaned.
+2024-06-13 12:51:28,092 - src.s3_utils - ERROR - Failed to upload ./data/processed/energy_clean.csv to tkh-nyc-energy/cleaned-zone//energy_cleaned_06132024.csv: Parameter validation failed:
+Invalid bucket name "tkh-nyc-energy/cleaned-zone/": Bucket name must match the regex "^[a-zA-Z0-9.\-_]{1,255}$" or be an ARN matching the regex "^arn:(aws).*:(s3|s3-object-lambda):[a-z\-0-9]*:[0-9]{12}:accesspoint[/:][a-zA-Z0-9\-.]{1,63}$|^arn:(aws).*:s3-outposts:[a-z\-0-9]+:[0-9]{12}:outpost[/:][a-zA-Z0-9\-]{1,63}[/:]accesspoint[/:][a-zA-Z0-9\-]{1,63}$"
+2024-06-13 12:51:28,092 - __main__ - INFO - Pipeline finished successfully.
+2024-06-13 12:52:20,747 - __main__ - INFO - Pipeline started.
+2024-06-13 12:52:20,778 - botocore.credentials - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2024-06-13 12:52:26,638 - src.s3_utils - INFO - Successfully fetched energy_raw_06032024.csv from tkh-nyc-energy
+2024-06-13 12:52:26,645 - src.data_cleaning - INFO - Selecting specific columns from the DataFrame.
+2024-06-13 12:52:26,679 - src.data_cleaning - INFO - Selected columns: ['borough', 'account_name', 'serial_number', 'funding_origin', 'total_bill', 'kwh_consumption', 'kwh_bill', 'kw_consumption', 'kw_bill', 'year_month', 'start_date', 'end_date']
+2024-06-13 12:52:26,680 - src.data_cleaning - INFO - Renaming columns of the DataFrame.
+2024-06-13 12:52:26,738 - src.data_cleaning - INFO - Renamed columns: ['Borough', 'Account_Name', 'Serial_Number', 'Funding_Origin', 'Total_Bill', 'KWH_Consumption', 'KWH_Bill', 'KW_Consumption', 'KW_Bill', 'Year_Month', 'Start_Date', 'End_Date']
+2024-06-13 12:52:26,738 - src.data_cleaning - INFO - Dropping columns with NaN values in 'Start_Date' and 'End_Date'.
+2024-06-13 12:52:26,845 - src.data_cleaning - INFO - Remaining columns after drop: ['Borough', 'Account_Name', 'Serial_Number', 'Funding_Origin', 'Total_Bill', 'KWH_Consumption', 'KWH_Bill', 'KW_Consumption', 'KW_Bill', 'Year_Month', 'Start_Date', 'End_Date']
+2024-06-13 12:52:26,846 - src.data_cleaning - INFO - Fixing data types of specific columns.
+2024-06-13 12:52:27,193 - src.data_cleaning - INFO - Data types fixed for columns: ['Total_Bill', 'KWH_Consumption', 'KW_Consumption', 'KW_Bill', 'KWH_Bill']
+2024-06-13 12:52:27,193 - src.data_cleaning - INFO - Cleaning textual columns: 'Borough', 'Account_Name', 'Funding_Origin'.
+2024-06-13 12:52:30,474 - src.data_cleaning - INFO - Textual columns cleaned.
+2024-06-13 12:52:30,474 - src.data_cleaning - INFO - Cleaning textual columns: 'Borough', 'Account_Name', 'Funding_Origin'.
+2024-06-13 12:52:33,164 - src.data_cleaning - INFO - Textual columns cleaned.
+2024-06-13 12:52:39,611 - src.s3_utils - ERROR - Failed to upload ./data/processed/energy_clean.csv to tkh-nyc-energy/cleaned-zone/energy_cleaned_06132024.csv: Parameter validation failed:
+Invalid bucket name "tkh-nyc-energy/cleaned-zone": Bucket name must match the regex "^[a-zA-Z0-9.\-_]{1,255}$" or be an ARN matching the regex "^arn:(aws).*:(s3|s3-object-lambda):[a-z\-0-9]*:[0-9]{12}:accesspoint[/:][a-zA-Z0-9\-.]{1,63}$|^arn:(aws).*:s3-outposts:[a-z\-0-9]+:[0-9]{12}:outpost[/:][a-zA-Z0-9\-]{1,63}[/:]accesspoint[/:][a-zA-Z0-9\-]{1,63}$"
+2024-06-13 12:52:39,611 - __main__ - INFO - Pipeline finished successfully.
